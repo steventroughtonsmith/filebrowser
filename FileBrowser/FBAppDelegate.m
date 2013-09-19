@@ -7,6 +7,11 @@
 //
 
 #import "FBAppDelegate.h"
+#import "FBFilesTableViewController.h"
+
+#include <sys/stat.h>
+
+NSString *startingPath = @"/";
 
 @implementation FBAppDelegate
 
@@ -16,6 +21,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+	
+	FBFilesTableViewController *startingVC = [[FBFilesTableViewController alloc] initWithPath:startingPath];
+	
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:startingVC];
+	
+	self.window.rootViewController = navController;
+	
     return YES;
 }
 

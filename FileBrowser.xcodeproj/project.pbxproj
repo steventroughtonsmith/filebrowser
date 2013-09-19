@@ -14,22 +14,8 @@
 		B03C5F061771107F00295DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F051771107F00295DD2 /* main.m */; };
 		B03C5F0A1771107F00295DD2 /* FBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F091771107F00295DD2 /* FBAppDelegate.m */; };
 		B03C5F0C1771107F00295DD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03C5F0B1771107F00295DD2 /* Images.xcassets */; };
-		B03C5F131771107F00295DD2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5F121771107F00295DD2 /* XCTest.framework */; };
-		B03C5F141771107F00295DD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EF91771107F00295DD2 /* Foundation.framework */; };
-		B03C5F151771107F00295DD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFD1771107F00295DD2 /* UIKit.framework */; };
-		B03C5F1D1771107F00295DD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B03C5F1B1771107F00295DD2 /* InfoPlist.strings */; };
-		B03C5F1F1771107F00295DD2 /* FileBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F1E1771107F00295DD2 /* FileBrowserTests.m */; };
+		B03C5F2A177110B400295DD2 /* FBFilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B03C5F161771107F00295DD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B03C5EF51771107F00295DD2;
-			remoteInfo = FileBrowser;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B03C5EF61771107F00295DD2 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,11 +29,12 @@
 		B03C5F081771107F00295DD2 /* FBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBAppDelegate.h; sourceTree = "<group>"; };
 		B03C5F091771107F00295DD2 /* FBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBAppDelegate.m; sourceTree = "<group>"; };
 		B03C5F0B1771107F00295DD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B03C5F111771107F00295DD2 /* FileBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C5F121771107F00295DD2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B03C5F1A1771107F00295DD2 /* FileBrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileBrowserTests-Info.plist"; sourceTree = "<group>"; };
 		B03C5F1C1771107F00295DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B03C5F1E1771107F00295DD2 /* FileBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileBrowserTests.m; sourceTree = "<group>"; };
+		B03C5F28177110B400295DD2 /* FBFilesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFilesTableViewController.h; sourceTree = "<group>"; };
+		B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFilesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +45,6 @@
 				B03C5EFC1771107F00295DD2 /* CoreGraphics.framework in Frameworks */,
 				B03C5EFE1771107F00295DD2 /* UIKit.framework in Frameworks */,
 				B03C5EFA1771107F00295DD2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B03C5F0E1771107F00295DD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B03C5F131771107F00295DD2 /* XCTest.framework in Frameworks */,
-				B03C5F151771107F00295DD2 /* UIKit.framework in Frameworks */,
-				B03C5F141771107F00295DD2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				B03C5EF61771107F00295DD2 /* FileBrowser.app */,
-				B03C5F111771107F00295DD2 /* FileBrowserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +85,8 @@
 			children = (
 				B03C5F081771107F00295DD2 /* FBAppDelegate.h */,
 				B03C5F091771107F00295DD2 /* FBAppDelegate.m */,
+				B03C5F28177110B400295DD2 /* FBFilesTableViewController.h */,
+				B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */,
 				B03C5F0B1771107F00295DD2 /* Images.xcassets */,
 				B03C5F001771107F00295DD2 /* Supporting Files */,
 			);
@@ -164,24 +142,6 @@
 			productReference = B03C5EF61771107F00295DD2 /* FileBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B03C5F101771107F00295DD2 /* FileBrowserTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B03C5F251771107F00295DD2 /* Build configuration list for PBXNativeTarget "FileBrowserTests" */;
-			buildPhases = (
-				B03C5F0D1771107F00295DD2 /* Sources */,
-				B03C5F0E1771107F00295DD2 /* Frameworks */,
-				B03C5F0F1771107F00295DD2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B03C5F171771107F00295DD2 /* PBXTargetDependency */,
-			);
-			name = FileBrowserTests;
-			productName = FileBrowserTests;
-			productReference = B03C5F111771107F00295DD2 /* FileBrowserTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,11 +151,6 @@
 				CLASSPREFIX = FB;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "High Caffeine Content";
-				TargetAttributes = {
-					B03C5F101771107F00295DD2 = {
-						TestTargetID = B03C5EF51771107F00295DD2;
-					};
-				};
 			};
 			buildConfigurationList = B03C5EF11771107F00295DD2 /* Build configuration list for PBXProject "FileBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -210,7 +165,6 @@
 			projectRoot = "";
 			targets = (
 				B03C5EF51771107F00295DD2 /* FileBrowser */,
-				B03C5F101771107F00295DD2 /* FileBrowserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,14 +179,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B03C5F0F1771107F00295DD2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B03C5F1D1771107F00295DD2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,28 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03C5F2A177110B400295DD2 /* FBFilesTableViewController.m in Sources */,
 				B03C5F0A1771107F00295DD2 /* FBAppDelegate.m in Sources */,
 				B03C5F061771107F00295DD2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B03C5F0D1771107F00295DD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B03C5F1F1771107F00295DD2 /* FileBrowserTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B03C5F171771107F00295DD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B03C5EF51771107F00295DD2 /* FileBrowser */;
-			targetProxy = B03C5F161771107F00295DD2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B03C5F021771107F00295DD2 /* InfoPlist.strings */ = {
@@ -379,46 +310,6 @@
 			};
 			name = Release;
 		};
-		B03C5F261771107F00295DD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileBrowser.app/FileBrowser";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FileBrowserTests/FileBrowserTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B03C5F271771107F00295DD2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileBrowser.app/FileBrowser";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
-				INFOPLIST_FILE = "FileBrowserTests/FileBrowserTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,14 +329,7 @@
 				B03C5F241771107F00295DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B03C5F251771107F00295DD2 /* Build configuration list for PBXNativeTarget "FileBrowserTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B03C5F261771107F00295DD2 /* Debug */,
-				B03C5F271771107F00295DD2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
