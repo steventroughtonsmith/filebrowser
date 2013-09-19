@@ -1,13 +1,13 @@
-FILEBROWSER
+FileBrowser
 =============
 
-SCREENSHOT
+Screenshot
 =============
 
 [![](https://lh4.googleusercontent.com/-FmQMoSD-jek/Ujte9GL3xfI/AAAAAAAABK0/4C_wlvW0sEA/w768-h454-no/FileBrowser-40.jpg)](https://lh4.googleusercontent.com/-FmQMoSD-jek/Ujte9GL3xfI/AAAAAAAABK0/4C_wlvW0sEA/w768-h454-no/FileBrowser-40.jpg)
 
 
-WHAT IS THIS?
+What is this?
 =============
 
 Really simple File Browser for iOS 7; allows you browse the filesystem and retrieve files using iMessage or AirDrop.
