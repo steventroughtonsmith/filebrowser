@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00D24B519D96A0800F66D2D /* FBCustomPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */; };
 		B03C5EFA1771107F00295DD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EF91771107F00295DD2 /* Foundation.framework */; };
 		B03C5EFC1771107F00295DD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */; };
 		B03C5EFE1771107F00295DD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFD1771107F00295DD2 /* UIKit.framework */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B00D24B319D96A0800F66D2D /* FBCustomPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCustomPreviewController.h; sourceTree = "<group>"; };
+		B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCustomPreviewController.m; sourceTree = "<group>"; };
 		B03C5EF61771107F00295DD2 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C5EF91771107F00295DD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				B03C5F091771107F00295DD2 /* FBAppDelegate.m */,
 				B03C5F28177110B400295DD2 /* FBFilesTableViewController.h */,
 				B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */,
+				B00D24B319D96A0800F66D2D /* FBCustomPreviewController.h */,
+				B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */,
 				B03C5F0B1771107F00295DD2 /* Images.xcassets */,
 				B03C5F001771107F00295DD2 /* Supporting Files */,
 			);
@@ -189,6 +194,7 @@
 				B03C5F2A177110B400295DD2 /* FBFilesTableViewController.m in Sources */,
 				B03C5F0A1771107F00295DD2 /* FBAppDelegate.m in Sources */,
 				B03C5F061771107F00295DD2 /* main.m in Sources */,
+				B00D24B519D96A0800F66D2D /* FBCustomPreviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +236,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steven Troughton-Smith (GF23LK2QK8)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -268,7 +274,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steven Troughton-Smith (GF23LK2QK8)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

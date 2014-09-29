@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F15FB594-329F-4439-8F50-13AC294685CD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FileBrowser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F183C585123BA2C8B735AC91E2A2D9AD31C8CFF0</key>
+		<string>ssh://github.com/steventroughtonsmith/filebrowser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FileBrowser.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F183C585123BA2C8B735AC91E2A2D9AD31C8CFF0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/steventroughtonsmith/filebrowser.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F183C585123BA2C8B735AC91E2A2D9AD31C8CFF0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F183C585123BA2C8B735AC91E2A2D9AD31C8CFF0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FileBrowser</string>
+		</dict>
+	</array>
+</dict>
+</plist>

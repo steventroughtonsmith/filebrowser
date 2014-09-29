@@ -7,6 +7,7 @@
 //
 
 #import "FBFilesTableViewController.h"
+#import "FBCustomPreviewController.h"
 
 @interface FBFilesTableViewController ()
 
@@ -24,24 +25,38 @@
 		self.title = [path lastPathComponent];
 		
 		NSError *error = nil;
-		self.files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+		NSArray *tempFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
 		
 		if (error)
 		{
 			NSLog(@"ERROR: %@", error);
 			
 			if ([path isEqualToString:@"/System"])
-				self.files = @[@"Library"];
+				tempFiles = @[@"Library"];
 			
 			if ([path isEqualToString:@"/Library"])
-				self.files = @[@"Preferences"];
-			
+				tempFiles = @[@"Preferences"];
 			
 			if ([path isEqualToString:@"/var"])
-				self.files = @[@"mobile"];
+				tempFiles = @[@"mobile"];
 			
+			if ([path isEqualToString:@"/usr"])
+				tempFiles = @[@"lib"];
 		}
 		
+		self.files = [tempFiles sortedArrayWithOptions:0 usingComparator:^NSComparisonResult(NSString* file1, NSString* file2) {
+			NSString *newPath1 = [self.path stringByAppendingPathComponent:file1];
+			NSString *newPath2 = [self.path stringByAppendingPathComponent:file2];
+
+			BOOL isDirectory1, isDirectory2;
+			[[NSFileManager defaultManager ] fileExistsAtPath:newPath1 isDirectory:&isDirectory1];
+			[[NSFileManager defaultManager ] fileExistsAtPath:newPath2 isDirectory:&isDirectory2];
+			
+			if (isDirectory1 && !isDirectory2)
+				return NSOrderedDescending;
+			
+			return  NSOrderedAscending;
+		}];
     }
     return self;
 }
@@ -86,6 +101,13 @@
 	
     cell.textLabel.text = self.files[indexPath.row];
 	
+	if (isDirectory)
+		cell.imageView.image = [UIImage imageNamed:@"Folder"];
+	else if ([[newPath pathExtension] isEqualToString:@"png"])
+		cell.imageView.image = [UIImage imageNamed:@"Picture"];
+	else
+		cell.imageView.image = nil;
+	
 	if (fileExists && !isDirectory)
 		cell.accessoryType = UITableViewCellAccessoryDetailButton;
 	else
@@ -114,10 +136,13 @@
 		
 	};
 	
-	[self.navigationController presentViewController:shareActivity animated:YES completion:^{
+	UIViewController *vc = [[UIViewController alloc] init];
+	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+	nc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+	
+	[self.navigationController presentViewController:nc animated:YES completion:^{
 		
 	}];
-	
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -136,14 +161,17 @@
 			FBFilesTableViewController *vc = [[FBFilesTableViewController alloc] initWithPath:newPath];
 			[self.navigationController pushViewController:vc animated:YES];
 		}
+		else if ([FBCustomPreviewController canHandleExtension:[newPath pathExtension]])
+		{
+			FBCustomPreviewController *preview = [[FBCustomPreviewController alloc] initWithFile:newPath];
+			[self.navigationController pushViewController:preview animated:YES];
+		}
 		else
 		{
-			
 			QLPreviewController *preview = [[QLPreviewController alloc] init];
 			preview.dataSource = self;
 			
 			[self.navigationController pushViewController:preview animated:YES];
-			
 		}
 	}
 }
@@ -156,7 +184,6 @@
 }
 
 - (NSInteger) numberOfPreviewItemsInPreviewController: (QLPreviewController *) controller {
-	
     return 1;
 }
 
@@ -166,7 +193,5 @@
 	
     return [NSURL fileURLWithPath:newPath];
 }
-
-
 
 @end
