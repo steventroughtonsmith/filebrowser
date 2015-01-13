@@ -4,10 +4,10 @@ FileBrowser
 Screenshot
 =============
 
-[![](https://lh4.googleusercontent.com/-FmQMoSD-jek/Ujte9GL3xfI/AAAAAAAABK0/4C_wlvW0sEA/w768-h454-no/FileBrowser-40.jpg)](https://lh4.googleusercontent.com/-FmQMoSD-jek/Ujte9GL3xfI/AAAAAAAABK0/4C_wlvW0sEA/w768-h454-no/FileBrowser-40.jpg)
+[![](https://lh3.googleusercontent.com/-XXe92YvltmA/VLVbfuJ15fI/AAAAAAAACC4/xwF8P8nhIpU/w3164-h1824-no/IMG_0322.jpg)](https://lh3.googleusercontent.com/-XXe92YvltmA/VLVbfuJ15fI/AAAAAAAACC4/xwF8P8nhIpU/w932-h537-no/IMG_0322.jpg)
 
 
 What is this?
 =============
 
-Really simple File Browser for iOS 7; allows you browse the filesystem and retrieve files using iMessage or AirDrop.
+Really simple File Browser for iOS; allows you browse the filesystem and retrieve files using iMessage or AirDrop.
