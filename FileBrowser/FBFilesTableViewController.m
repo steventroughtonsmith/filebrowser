@@ -108,41 +108,57 @@
 	else
 		cell.imageView.image = nil;
 	
-	if (fileExists && !isDirectory)
-		cell.accessoryType = UITableViewCellAccessoryDetailButton;
-	else
-		cell.accessoryType = UITableViewCellAccessoryNone;
+	cell.accessoryType = UITableViewCellAccessoryDetailButton;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *newPath = [self.path stringByAppendingPathComponent:self.files[indexPath.row]];
-	
-	NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:newPath.lastPathComponent];
-	
-	NSError *error = nil;
-	
-	[[NSFileManager defaultManager] copyItemAtPath:newPath toPath:tmpPath error:&error];
-	
-	if (error)
-		NSLog(@"ERROR: %@", error);
-	
-	UIActivityViewController *shareActivity = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL fileURLWithPath:tmpPath]] applicationActivities:nil];
-	
-	shareActivity.completionHandler = ^(NSString *activityType, BOOL completed){
-		[[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
-		
-	};
-	
-	UIViewController *vc = [[UIViewController alloc] init];
-	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-	nc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-	
-	[self.navigationController presentViewController:nc animated:YES completion:^{
-		
-	}];
+    NSString *newPath = [self.path stringByAppendingPathComponent:self.files[indexPath.row]];
+    
+    NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:newPath.lastPathComponent];
+    
+    BOOL isDirectory;
+    BOOL fileExists = [[NSFileManager defaultManager ] fileExistsAtPath:newPath isDirectory:&isDirectory];
+    if (fileExists && !isDirectory) {
+        NSError *error = nil;
+        
+        [[NSFileManager defaultManager] copyItemAtPath:newPath toPath:tmpPath error:&error];
+        
+        if (error)
+            NSLog(@"ERROR: %@", error);
+        
+        UIActivityViewController *shareActivity = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL fileURLWithPath:tmpPath]] applicationActivities:nil];
+        
+        shareActivity.completionHandler = ^(NSString *activityType, BOOL completed){
+            [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
+            
+        };
+        
+        [self.navigationController presentViewController:shareActivity animated:YES completion:^{
+            
+        }];
+    } else {
+        tmpPath = [tmpPath stringByAppendingString:@".zip"];
+        NSFileCoordinator *coordinator = [[NSFileCoordinator alloc]initWithFilePresenter:nil];
+        [coordinator coordinateReadingItemAtURL:[NSURL fileURLWithPath:newPath] options:NSFileCoordinatorReadingForUploading error:nil byAccessor:^(NSURL *newURL) {
+            NSData *newData = [NSData dataWithContentsOfURL:newURL];
+            [newData writeToFile:tmpPath atomically:true];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIActivityViewController *shareActivity = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL fileURLWithPath:tmpPath]] applicationActivities:nil];
+                
+                shareActivity.completionHandler = ^(NSString *activityType, BOOL completed){
+                    [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
+                    
+                };
+                
+                [self.navigationController presentViewController:shareActivity animated:YES completion:^{
+                    
+                }];
+            });
+        }];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
