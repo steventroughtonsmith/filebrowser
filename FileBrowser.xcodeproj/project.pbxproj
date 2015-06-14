@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B00D24B519D96A0800F66D2D /* FBCustomPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */; };
+		B01916B71B2C0CAC00311461 /* NanoFileBrowserFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = B01916B61B2C0CAC00311461 /* NanoFileBrowserFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01916BE1B2C0CE300311461 /* FBCustomPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */; };
+		B01916C01B2C0D0900311461 /* FBFrameworkMain.m in Sources */ = {isa = PBXBuildFile; fileRef = B01916BF1B2C0D0900311461 /* FBFrameworkMain.m */; };
+		B01916C21B2C0D6100311461 /* PepperUICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01916C11B2C0D6100311461 /* PepperUICore.framework */; };
+		B01916C91B2C101400311461 /* NanoFBFilesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B01916C61B2C101400311461 /* NanoFBFilesTableViewController.h */; };
+		B01916CA1B2C101400311461 /* NanoFBFilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01916C71B2C101400311461 /* NanoFBFilesTableViewController.m */; };
+		B01916CB1B2C101400311461 /* Pepper.h in Headers */ = {isa = PBXBuildFile; fileRef = B01916C81B2C101400311461 /* Pepper.h */; };
+		B01916CE1B2C10C500311461 /* NanoFBAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B01916CC1B2C10C500311461 /* NanoFBAppDelegate.h */; };
+		B01916CF1B2C10C500311461 /* NanoFBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B01916CD1B2C10C500311461 /* NanoFBAppDelegate.m */; };
 		B03C5EFA1771107F00295DD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EF91771107F00295DD2 /* Foundation.framework */; };
 		B03C5EFC1771107F00295DD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */; };
 		B03C5EFE1771107F00295DD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFD1771107F00295DD2 /* UIKit.framework */; };
@@ -16,11 +25,78 @@
 		B03C5F0A1771107F00295DD2 /* FBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F091771107F00295DD2 /* FBAppDelegate.m */; };
 		B03C5F0C1771107F00295DD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03C5F0B1771107F00295DD2 /* Images.xcassets */; };
 		B03C5F2A177110B400295DD2 /* FBFilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */; };
+		B0B5F8701B2D04B700C0E0AF /* Browser-80.png in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F86F1B2D04B700C0E0AF /* Browser-80.png */; };
+		B0B5F8AA1B2D127200C0E0AF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8A81B2D127200C0E0AF /* Interface.storyboard */; };
+		B0B5F8AC1B2D127200C0E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8AB1B2D127200C0E0AF /* Assets.xcassets */; };
+		B0B5F8B31B2D127200C0E0AF /* NanoFileBrowser Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B0B5F8B91B2D127200C0E0AF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5F8B81B2D127200C0E0AF /* InterfaceController.m */; };
+		B0B5F8BC1B2D127200C0E0AF /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5F8BB1B2D127200C0E0AF /* ExtensionDelegate.m */; };
+		B0B5F8BE1B2D127200C0E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8BD1B2D127200C0E0AF /* Assets.xcassets */; };
+		B0B5F8C21B2D127200C0E0AF /* NanoFileBrowser.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B01916C41B2C0F1000311461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B01916B31B2C0CAC00311461;
+			remoteInfo = NanoFileBrowserFramework;
+		};
+		B0B5F8B41B2D127200C0E0AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B5F8B11B2D127200C0E0AF;
+			remoteInfo = "NanoFileBrowser Extension";
+		};
+		B0B5F8C01B2D127200C0E0AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B5F8A51B2D127200C0E0AF;
+			remoteInfo = NanoFileBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B01916AE1B2C0C8400311461 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B0B5F8C21B2D127200C0E0AF /* NanoFileBrowser.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B5F8C61B2D127200C0E0AF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B0B5F8B31B2D127200C0E0AF /* NanoFileBrowser Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B00D24B319D96A0800F66D2D /* FBCustomPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCustomPreviewController.h; sourceTree = "<group>"; };
 		B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCustomPreviewController.m; sourceTree = "<group>"; };
+		B01916B41B2C0CAC00311461 /* NanoFileBrowserFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NanoFileBrowserFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01916B61B2C0CAC00311461 /* NanoFileBrowserFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NanoFileBrowserFramework.h; sourceTree = "<group>"; };
+		B01916B81B2C0CAC00311461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B01916BF1B2C0D0900311461 /* FBFrameworkMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFrameworkMain.m; sourceTree = "<group>"; };
+		B01916C11B2C0D6100311461 /* PepperUICore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PepperUICore.framework; path = Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk/System/Library/PrivateFrameworks/PepperUICore.framework; sourceTree = DEVELOPER_DIR; };
+		B01916C61B2C101400311461 /* NanoFBFilesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoFBFilesTableViewController.h; sourceTree = "<group>"; };
+		B01916C71B2C101400311461 /* NanoFBFilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NanoFBFilesTableViewController.m; sourceTree = "<group>"; };
+		B01916C81B2C101400311461 /* Pepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pepper.h; sourceTree = "<group>"; };
+		B01916CC1B2C10C500311461 /* NanoFBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoFBAppDelegate.h; sourceTree = "<group>"; };
+		B01916CD1B2C10C500311461 /* NanoFBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NanoFBAppDelegate.m; sourceTree = "<group>"; };
 		B03C5EF61771107F00295DD2 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C5EF91771107F00295DD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -38,9 +114,35 @@
 		B03C5F1E1771107F00295DD2 /* FileBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileBrowserTests.m; sourceTree = "<group>"; };
 		B03C5F28177110B400295DD2 /* FBFilesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFilesTableViewController.h; sourceTree = "<group>"; };
 		B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFilesTableViewController.m; sourceTree = "<group>"; };
+		B0B5F86F1B2D04B700C0E0AF /* Browser-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Browser-80.png"; path = "../../../../../Desktop/Browser-80.png"; sourceTree = "<group>"; };
+		B0B5F8991B2D0FCC00C0E0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B5F89A1B2D0FCC00C0E0AF /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		B0B5F89B1B2D0FCC00C0E0AF /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		B0B5F89C1B2D0FCC00C0E0AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B5F89D1B2D0FCC00C0E0AF /* InterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		B0B5F89E1B2D0FCD00C0E0AF /* InterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoFileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B5F8A91B2D127200C0E0AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B0B5F8AB1B2D127200C0E0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B5F8AD1B2D127200C0E0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NanoFileBrowser Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B5F8B71B2D127200C0E0AF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		B0B5F8B81B2D127200C0E0AF /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		B0B5F8BA1B2D127200C0E0AF /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		B0B5F8BB1B2D127200C0E0AF /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		B0B5F8BD1B2D127200C0E0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B5F8BF1B2D127200C0E0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B01916B01B2C0CAC00311461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01916C21B2C0D6100311461 /* PepperUICore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B03C5EF31771107F00295DD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,14 +153,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0B5F8AF1B2D127200C0E0AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01916B51B2C0CAC00311461 /* NanoFileBrowserFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5F86F1B2D04B700C0E0AF /* Browser-80.png */,
+				B01916C81B2C101400311461 /* Pepper.h */,
+				B01916CC1B2C10C500311461 /* NanoFBAppDelegate.h */,
+				B01916CD1B2C10C500311461 /* NanoFBAppDelegate.m */,
+				B01916C61B2C101400311461 /* NanoFBFilesTableViewController.h */,
+				B01916C71B2C101400311461 /* NanoFBFilesTableViewController.m */,
+				B01916B61B2C0CAC00311461 /* NanoFileBrowserFramework.h */,
+				B01916BF1B2C0D0900311461 /* FBFrameworkMain.m */,
+				B01916B81B2C0CAC00311461 /* Info.plist */,
+				B0B5F8981B2D0FCC00C0E0AF /* NanoFileBrowser Extension */,
+			);
+			path = NanoFileBrowserFramework;
+			sourceTree = "<group>";
+		};
 		B03C5EED1771107F00295DD2 = {
 			isa = PBXGroup;
 			children = (
 				B03C5EFF1771107F00295DD2 /* FileBrowser */,
 				B03C5F181771107F00295DD2 /* FileBrowserTests */,
+				B01916B51B2C0CAC00311461 /* NanoFileBrowserFramework */,
+				B0B5F8A71B2D127200C0E0AF /* NanoFileBrowser */,
+				B0B5F8B61B2D127200C0E0AF /* NanoFileBrowser Extension */,
 				B03C5EF81771107F00295DD2 /* Frameworks */,
 				B03C5EF71771107F00295DD2 /* Products */,
 			);
@@ -68,6 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				B03C5EF61771107F00295DD2 /* FileBrowser.app */,
+				B01916B41B2C0CAC00311461 /* NanoFileBrowserFramework.framework */,
+				B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */,
+				B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +207,7 @@
 		B03C5EF81771107F00295DD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B01916C11B2C0D6100311461 /* PepperUICore.framework */,
 				B03C5EF91771107F00295DD2 /* Foundation.framework */,
 				B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */,
 				B03C5EFD1771107F00295DD2 /* UIKit.framework */,
@@ -127,9 +260,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B0B5F8981B2D0FCC00C0E0AF /* NanoFileBrowser Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5F8991B2D0FCC00C0E0AF /* Assets.xcassets */,
+				B0B5F89A1B2D0FCC00C0E0AF /* ExtensionDelegate.h */,
+				B0B5F89B1B2D0FCC00C0E0AF /* ExtensionDelegate.m */,
+				B0B5F89C1B2D0FCC00C0E0AF /* Info.plist */,
+				B0B5F89D1B2D0FCC00C0E0AF /* InterfaceController.h */,
+				B0B5F89E1B2D0FCD00C0E0AF /* InterfaceController.m */,
+			);
+			path = "NanoFileBrowser Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+		B0B5F8A71B2D127200C0E0AF /* NanoFileBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5F8A81B2D127200C0E0AF /* Interface.storyboard */,
+				B0B5F8AB1B2D127200C0E0AF /* Assets.xcassets */,
+				B0B5F8AD1B2D127200C0E0AF /* Info.plist */,
+			);
+			path = NanoFileBrowser;
+			sourceTree = "<group>";
+		};
+		B0B5F8B61B2D127200C0E0AF /* NanoFileBrowser Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5F8B71B2D127200C0E0AF /* InterfaceController.h */,
+				B0B5F8B81B2D127200C0E0AF /* InterfaceController.m */,
+				B0B5F8BA1B2D127200C0E0AF /* ExtensionDelegate.h */,
+				B0B5F8BB1B2D127200C0E0AF /* ExtensionDelegate.m */,
+				B0B5F8BD1B2D127200C0E0AF /* Assets.xcassets */,
+				B0B5F8BF1B2D127200C0E0AF /* Info.plist */,
+			);
+			path = "NanoFileBrowser Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B01916B11B2C0CAC00311461 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01916CB1B2C101400311461 /* Pepper.h in Headers */,
+				B01916CE1B2C10C500311461 /* NanoFBAppDelegate.h in Headers */,
+				B01916C91B2C101400311461 /* NanoFBFilesTableViewController.h in Headers */,
+				B01916B71B2C0CAC00311461 /* NanoFileBrowserFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B01916B91B2C0CAC00311461 /* Build configuration list for PBXNativeTarget "NanoFileBrowserFramework" */;
+			buildPhases = (
+				B01916AF1B2C0CAC00311461 /* Sources */,
+				B01916B01B2C0CAC00311461 /* Frameworks */,
+				B01916B11B2C0CAC00311461 /* Headers */,
+				B01916B21B2C0CAC00311461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NanoFileBrowserFramework;
+			productName = NanoFileBrowserFramework;
+			productReference = B01916B41B2C0CAC00311461 /* NanoFileBrowserFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B03C5EF51771107F00295DD2 /* FileBrowser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B03C5F221771107F00295DD2 /* Build configuration list for PBXNativeTarget "FileBrowser" */;
@@ -137,15 +338,54 @@
 				B03C5EF21771107F00295DD2 /* Sources */,
 				B03C5EF31771107F00295DD2 /* Frameworks */,
 				B03C5EF41771107F00295DD2 /* Resources */,
+				B01916AE1B2C0C8400311461 /* Embed Watch Content */,
+				B01916C31B2C0DA700311461 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B01916C51B2C0F1000311461 /* PBXTargetDependency */,
+				B0B5F8C11B2D127200C0E0AF /* PBXTargetDependency */,
 			);
 			name = FileBrowser;
 			productName = FileBrowser;
 			productReference = B03C5EF61771107F00295DD2 /* FileBrowser.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B5F8C71B2D127200C0E0AF /* Build configuration list for PBXNativeTarget "NanoFileBrowser" */;
+			buildPhases = (
+				B0B5F8A41B2D127200C0E0AF /* Resources */,
+				B0B5F8C61B2D127200C0E0AF /* Embed App Extensions */,
+				B01916C31B2C0DA700311461 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0B5F8B51B2D127200C0E0AF /* PBXTargetDependency */,
+			);
+			name = NanoFileBrowser;
+			productName = NanoFileBrowser;
+			productReference = B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B0B5F8B11B2D127200C0E0AF /* NanoFileBrowser Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B5F8C31B2D127200C0E0AF /* Build configuration list for PBXNativeTarget "NanoFileBrowser Extension" */;
+			buildPhases = (
+				B0B5F8AE1B2D127200C0E0AF /* Sources */,
+				B0B5F8AF1B2D127200C0E0AF /* Frameworks */,
+				B0B5F8B01B2D127200C0E0AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NanoFileBrowser Extension";
+			productName = "NanoFileBrowser Extension";
+			productReference = B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -156,6 +396,21 @@
 				CLASSPREFIX = FB;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "High Caffeine Content";
+				TargetAttributes = {
+					B01916B31B2C0CAC00311461 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B03C5EF51771107F00295DD2 = {
+						DevelopmentTeam = 2ZDN69KUUV;
+					};
+					B0B5F8A51B2D127200C0E0AF = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2ZDN69KUUV;
+					};
+					B0B5F8B11B2D127200C0E0AF = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
 			};
 			buildConfigurationList = B03C5EF11771107F00295DD2 /* Build configuration list for PBXProject "FileBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -163,6 +418,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B03C5EED1771107F00295DD2;
 			productRefGroup = B03C5EF71771107F00295DD2 /* Products */;
@@ -170,11 +426,22 @@
 			projectRoot = "";
 			targets = (
 				B03C5EF51771107F00295DD2 /* FileBrowser */,
+				B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */,
+				B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */,
+				B0B5F8B11B2D127200C0E0AF /* NanoFileBrowser Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B01916B21B2C0CAC00311461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B5F8701B2D04B700C0E0AF /* Browser-80.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B03C5EF41771107F00295DD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,9 +451,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0B5F8A41B2D127200C0E0AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B5F8AC1B2D127200C0E0AF /* Assets.xcassets in Resources */,
+				B0B5F8AA1B2D127200C0E0AF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B5F8B01B2D127200C0E0AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B5F8BE1B2D127200C0E0AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B01916C31B2C0DA700311461 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "NANO_APP=NanoFileBrowser\nNANO_FRAMEWORK=NanoFileBrowserFramework\n\n# Relink\n#\n\nWATCHSDKROOT=${SDKROOT//iPhone/Watch}\nPHONESDKROOT=${SDKROOT//Watch/iPhone}\n\nif [[ $PLATFORM_NAME == \"watch\"* ]]\n\nthen\nmkdir -p $SYMROOT/$CONFIGURATION-${PLATFORM_NAME/iphone/watch}/$NANO_APP.app/Frameworks\ncp -R $SYMROOT/$CONFIGURATION-${PLATFORM_NAME}/$NANO_FRAMEWORK.framework $SYMROOT/$CONFIGURATION-${PLATFORM_NAME}/$NANO_APP.app/Frameworks/\ninstall_name_tool -change /System/Library/PrivateFrameworks/SockPuppetGizmo.framework/SockPuppetGizmo @rpath/$NANO_FRAMEWORK.framework/$NANO_FRAMEWORK ${PHONESDKROOT/2.0/9.0}/Library/Application\\ Support/WatchKit/WK\ninstall_name_tool -change /System/Library/PrivateFrameworks/SockPuppetGizmo.framework/SockPuppetGizmo @rpath/$NANO_FRAMEWORK.framework/$NANO_FRAMEWORK ${WATCHSDKROOT/9.0/2.0}/Library/Application\\ Support/WatchKit/WK\n\nelse\ninstall_name_tool -change @rpath/$NANO_FRAMEWORK.framework/$NANO_FRAMEWORK /System/Library/PrivateFrameworks/SockPuppetGizmo.framework/SockPuppetGizmo ${PHONESDKROOT/2.0/9.0}/Library/Application\\ Support/WatchKit/WK\ninstall_name_tool -change @rpath/$NANO_FRAMEWORK.framework/$NANO_FRAMEWORK /System/Library/PrivateFrameworks/SockPuppetGizmo.framework/SockPuppetGizmo ${WATCHSDKROOT/9.0/2.0}/Library/Application\\ Support/WatchKit/WK\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		B01916AF1B2C0CAC00311461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01916CA1B2C101400311461 /* NanoFBFilesTableViewController.m in Sources */,
+				B01916CF1B2C10C500311461 /* NanoFBAppDelegate.m in Sources */,
+				B01916BE1B2C0CE300311461 /* FBCustomPreviewController.m in Sources */,
+				B01916C01B2C0D0900311461 /* FBFrameworkMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B03C5EF21771107F00295DD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,7 +509,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0B5F8AE1B2D127200C0E0AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B5F8BC1B2D127200C0E0AF /* ExtensionDelegate.m in Sources */,
+				B0B5F8B91B2D127200C0E0AF /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B01916C51B2C0F1000311461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */;
+			targetProxy = B01916C41B2C0F1000311461 /* PBXContainerItemProxy */;
+		};
+		B0B5F8B51B2D127200C0E0AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0B5F8B11B2D127200C0E0AF /* NanoFileBrowser Extension */;
+			targetProxy = B0B5F8B41B2D127200C0E0AF /* PBXContainerItemProxy */;
+		};
+		B0B5F8C11B2D127200C0E0AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */;
+			targetProxy = B0B5F8C01B2D127200C0E0AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B03C5F021771107F00295DD2 /* InfoPlist.strings */ = {
@@ -217,9 +555,81 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		B0B5F8A81B2D127200C0E0AF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0B5F8A91B2D127200C0E0AF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B01916BA1B2C0CAC00311461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = /System/Library/PrivateFrameworks;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = NanoFileBrowserFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.NanoFileBrowserFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B01916BB1B2C0CAC00311461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = /System/Library/PrivateFrameworks;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = NanoFileBrowserFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.NanoFileBrowserFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		B03C5F201771107F00295DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,6 +707,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
 				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
@@ -310,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
 				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
@@ -318,9 +730,114 @@
 			};
 			name = Release;
 		};
+		B0B5F8C41B2D127200C0E0AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "NanoFileBrowser Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.FileBrowser.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B0B5F8C51B2D127200C0E0AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "NanoFileBrowser Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.FileBrowser.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B0B5F8C81B2D127200C0E0AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = NanoFileBrowser_Extension;
+				INFOPLIST_FILE = NanoFileBrowser/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.FileBrowser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B0B5F8C91B2D127200C0E0AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = NanoFileBrowser_Extension;
+				INFOPLIST_FILE = NanoFileBrowser/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.FileBrowser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B01916B91B2C0CAC00311461 /* Build configuration list for PBXNativeTarget "NanoFileBrowserFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B01916BA1B2C0CAC00311461 /* Debug */,
+				B01916BB1B2C0CAC00311461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B03C5EF11771107F00295DD2 /* Build configuration list for PBXProject "FileBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -335,6 +852,24 @@
 			buildConfigurations = (
 				B03C5F231771107F00295DD2 /* Debug */,
 				B03C5F241771107F00295DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0B5F8C31B2D127200C0E0AF /* Build configuration list for PBXNativeTarget "NanoFileBrowser Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B5F8C41B2D127200C0E0AF /* Debug */,
+				B0B5F8C51B2D127200C0E0AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0B5F8C71B2D127200C0E0AF /* Build configuration list for PBXNativeTarget "NanoFileBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B5F8C81B2D127200C0E0AF /* Debug */,
+				B0B5F8C91B2D127200C0E0AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

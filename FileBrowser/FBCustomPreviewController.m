@@ -18,7 +18,7 @@
 {
 	self = [super init];
 	if (self) {
-		textView = [[UITextView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+		textView = [[UITextView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 		textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 		textView.editable = NO;
 		

@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 High Caffeine Content. All rights reserved.
 //
 
-#import "FBFilesTableViewController.h"
+#import "NanoFBFilesTableViewController.h"
 #import "FBCustomPreviewController.h"
+
 
 @interface FBFilesTableViewController ()
 
@@ -19,7 +20,6 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        
 		self.path = path;
 		
 		self.title = [path lastPathComponent];
@@ -27,6 +27,9 @@
 		NSError *error = nil;
 		NSArray *tempFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
 		
+		if ([path isEqualToString:@"/"])
+			tempFiles = @[@"Applications", @"Library", @"System", @"usr"];
+
 		if (error)
 		{
 			NSLog(@"ERROR: %@", error);
@@ -61,6 +64,8 @@
     return self;
 }
 
+UIAlertController *ac;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -92,7 +97,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (!cell)
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+		cell = [[PUICTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 	
 	NSString *newPath = [self.path stringByAppendingPathComponent:self.files[indexPath.row]];
 	
@@ -108,6 +113,7 @@
 	else
 		cell.imageView.image = nil;
 	
+
 #if 0
 	if (fileExists && !isDirectory)
 		cell.accessoryType = UITableViewCellAccessoryDetailButton;
@@ -138,12 +144,16 @@
 	};
 	
 	UIViewController *vc = [[UIViewController alloc] init];
-	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-	nc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+	//UINavigationController *nc = [[NSClassFromString(@"PUICNavigationController") alloc] initWithRootViewController:vc];
+	//nc.modalPresentationStyle = UIModalPresentationFullScreen;
 	
+	[self.navigationController pushViewController:vc animated:YES];
+	
+	/*
 	[self.navigationController presentViewController:nc animated:YES completion:^{
 		
 	}];
+	 */
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

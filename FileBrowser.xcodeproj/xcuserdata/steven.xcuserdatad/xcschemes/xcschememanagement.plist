@@ -9,15 +9,60 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Glance - NanoFileBrowser.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>NanoFileBrowser.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>NanoFileBrowserFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Notification - NanoFileBrowser.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B01916891B2C0C8400311461</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01916B31B2C0CAC00311461</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01916D01B2C1CAC00311461</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B03C5EF51771107F00295DD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B03C5F101771107F00295DD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0B5F8721B2D0E7000C0E0AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0B5F8A51B2D127200C0E0AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

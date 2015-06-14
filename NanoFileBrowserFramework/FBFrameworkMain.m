@@ -6,4 +6,16 @@
 //  Copyright © 2015 High Caffeine Content. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//#import <runtime.h>
+
+@import ObjectiveC.runtime;
+
+void __attribute__((constructor)) injected_main()
+{
+
+	@autoreleasepool {
+		UIApplicationMain(0, nil, @"PUICApplication", @"FBAppDelegate");
+	}
+}
