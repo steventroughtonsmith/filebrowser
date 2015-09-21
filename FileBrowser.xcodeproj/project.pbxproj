@@ -25,10 +25,10 @@
 				B09820331BAFC69C003F6636 /* Package UIKit for WatchOS */,
 			);
 			dependencies = (
+				B0AECFB81BAFE47000D82731 /* PBXTargetDependency */,
 				B08285F61BAFD55E006792A8 /* PBXTargetDependency */,
 				B09820301BAFC68C003F6636 /* PBXTargetDependency */,
 				B09820321BAFC697003F6636 /* PBXTargetDependency */,
-				B09820351BAFC6CA003F6636 /* PBXTargetDependency */,
 			);
 			name = "NanoFileBrowser-Package";
 			productName = "NanoFileBrowser-Package";
@@ -61,13 +61,23 @@
 		B08285E91BAFCF6F006792A8 /* NanoFBFilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01916C71B2C101400311461 /* NanoFBFilesTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B08285EB1BAFCF6F006792A8 /* FBFrameworkMain.m in Sources */ = {isa = PBXBuildFile; fileRef = B01916BF1B2C0D0900311461 /* FBFrameworkMain.m */; settings = {ASSET_TAGS = (); }; };
 		B08285EE1BAFD310006792A8 /* FBCustomPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */; };
+		B0AECFA31BAFE45E00D82731 /* FBFilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F29177110B400295DD2 /* FBFilesTableViewController.m */; };
+		B0AECFA41BAFE45E00D82731 /* FBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F091771107F00295DD2 /* FBAppDelegate.m */; };
+		B0AECFA51BAFE45E00D82731 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C5F051771107F00295DD2 /* main.m */; };
+		B0AECFA61BAFE45E00D82731 /* FBCustomPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D24B419D96A0800F66D2D /* FBCustomPreviewController.m */; };
+		B0AECFA81BAFE45E00D82731 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFB1771107F00295DD2 /* CoreGraphics.framework */; };
+		B0AECFA91BAFE45E00D82731 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EFD1771107F00295DD2 /* UIKit.framework */; };
+		B0AECFAA1BAFE45E00D82731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03C5EF91771107F00295DD2 /* Foundation.framework */; };
+		B0AECFAC1BAFE45E00D82731 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B03C5F021771107F00295DD2 /* InfoPlist.strings */; };
+		B0AECFAD1BAFE45E00D82731 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03C5F0B1771107F00295DD2 /* Images.xcassets */; };
+		B0AECFAE1BAFE45E00D82731 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03C7F471B3351F70024F0B5 /* Launch Screen.xib */; };
+		B0AECFB01BAFE45E00D82731 /* NanoFileBrowser.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */; };
 		B0B5F8AA1B2D127200C0E0AF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8A81B2D127200C0E0AF /* Interface.storyboard */; };
 		B0B5F8AC1B2D127200C0E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8AB1B2D127200C0E0AF /* Assets.xcassets */; };
 		B0B5F8B31B2D127200C0E0AF /* NanoFileBrowser Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B0B5F8B91B2D127200C0E0AF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5F8B81B2D127200C0E0AF /* InterfaceController.m */; };
 		B0B5F8BC1B2D127200C0E0AF /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5F8BB1B2D127200C0E0AF /* ExtensionDelegate.m */; };
 		B0B5F8BE1B2D127200C0E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5F8BD1B2D127200C0E0AF /* Assets.xcassets */; };
-		B0B5F8C21B2D127200C0E0AF /* NanoFileBrowser.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +87,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B08285F01BAFD54D006792A8;
 			remoteInfo = Prerequisites;
-		};
-		B082CC0B1B3A05A10046F747 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B01916B31B2C0CAC00311461;
-			remoteInfo = NanoFileBrowserFramework;
 		};
 		B098202F1BAFC68C003F6636 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,12 +102,26 @@
 			remoteGlobalIDString = B0B5F8A51B2D127200C0E0AF;
 			remoteInfo = NanoFileBrowser;
 		};
-		B09820341BAFC6CA003F6636 /* PBXContainerItemProxy */ = {
+		B0AECF9F1BAFE45E00D82731 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B03C5EF51771107F00295DD2;
-			remoteInfo = FileBrowser;
+			remoteGlobalIDString = B01916B31B2C0CAC00311461;
+			remoteInfo = NanoFileBrowserFramework;
+		};
+		B0AECFA11BAFE45E00D82731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B5F8A51B2D127200C0E0AF;
+			remoteInfo = NanoFileBrowser;
+		};
+		B0AECFB71BAFE47000D82731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0AECF9D1BAFE45E00D82731;
+			remoteInfo = "FileBrowser-Watch";
 		};
 		B0B5F8B41B2D127200C0E0AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -113,28 +130,21 @@
 			remoteGlobalIDString = B0B5F8B11B2D127200C0E0AF;
 			remoteInfo = "NanoFileBrowser Extension";
 		};
-		B0C0CF231B3436AC0012903B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B03C5EEE1771107F00295DD2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B0B5F8A51B2D127200C0E0AF;
-			remoteInfo = NanoFileBrowser;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B01916AE1B2C0C8400311461 /* Embed Watch Content */ = {
+		B0AECFAF1BAFE45E00D82731 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				B0B5F8C21B2D127200C0E0AF /* NanoFileBrowser.app in Embed Watch Content */,
+				B0AECFB01BAFE45E00D82731 /* NanoFileBrowser.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B05CE27A1B334BD200986C17 /* Embed App Extensions */ = {
+		B0AECFB11BAFE45E00D82731 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -196,6 +206,7 @@
 		B0649C7F1BA0E79F0066BEFD /* FBTVFilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTVFilesTableViewController.m; sourceTree = "<group>"; };
 		B07B35581B38AD6800C772E7 /* PepperUICore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PepperUICore.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS1.0.sdk/System/Library/PrivateFrameworks/PepperUICore.framework; sourceTree = DEVELOPER_DIR; };
 		B08285EC1BAFD00A006792A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B0AECFB51BAFE45E00D82731 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B5F8991B2D0FCC00C0E0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B5F89A1B2D0FCC00C0E0AF /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
 		B0B5F89B1B2D0FCC00C0E0AF /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
@@ -238,6 +249,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0AECFA71BAFE45E00D82731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0AECFA81BAFE45E00D82731 /* CoreGraphics.framework in Frameworks */,
+				B0AECFA91BAFE45E00D82731 /* UIKit.framework in Frameworks */,
+				B0AECFAA1BAFE45E00D82731 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +309,7 @@
 				B0B5F8A61B2D127200C0E0AF /* NanoFileBrowser.app */,
 				B0B5F8B21B2D127200C0E0AF /* NanoFileBrowser Extension.appex */,
 				B0649C641BA0E6B70066BEFD /* TVFileBrowser.app */,
+				B0AECFB51BAFE45E00D82731 /* FileBrowser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,14 +456,10 @@
 				B03C5EF21771107F00295DD2 /* Sources */,
 				B03C5EF31771107F00295DD2 /* Frameworks */,
 				B03C5EF41771107F00295DD2 /* Resources */,
-				B01916AE1B2C0C8400311461 /* Embed Watch Content */,
-				B05CE27A1B334BD200986C17 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B082CC0C1B3A05A10046F747 /* PBXTargetDependency */,
-				B0C0CF241B3436AC0012903B /* PBXTargetDependency */,
 			);
 			name = FileBrowser;
 			productName = FileBrowser;
@@ -463,6 +481,27 @@
 			name = TVFileBrowser;
 			productName = TVFileBrowser;
 			productReference = B0649C641BA0E6B70066BEFD /* TVFileBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser-Watch" */;
+			buildPhases = (
+				B0AECFA21BAFE45E00D82731 /* Sources */,
+				B0AECFA71BAFE45E00D82731 /* Frameworks */,
+				B0AECFAB1BAFE45E00D82731 /* Resources */,
+				B0AECFAF1BAFE45E00D82731 /* Embed Watch Content */,
+				B0AECFB11BAFE45E00D82731 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0AECF9E1BAFE45E00D82731 /* PBXTargetDependency */,
+				B0AECFA01BAFE45E00D82731 /* PBXTargetDependency */,
+			);
+			name = "FileBrowser-Watch";
+			productName = FileBrowser;
+			productReference = B0AECFB51BAFE45E00D82731 /* FileBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */ = {
@@ -555,6 +594,7 @@
 				B0649C631BA0E6B70066BEFD /* TVFileBrowser */,
 				B098202B1BAFC681003F6636 /* NanoFileBrowser-Package */,
 				B08285F01BAFD54D006792A8 /* Prerequisites */,
+				B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */,
 			);
 		};
 /* End PBXProject section */
@@ -583,6 +623,16 @@
 			files = (
 				B0649C731BA0E6B80066BEFD /* Assets.xcassets in Resources */,
 				B0649C711BA0E6B80066BEFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0AECFAB1BAFE45E00D82731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0AECFAC1BAFE45E00D82731 /* InfoPlist.strings in Resources */,
+				B0AECFAD1BAFE45E00D82731 /* Images.xcassets in Resources */,
+				B0AECFAE1BAFE45E00D82731 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +719,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0AECFA21BAFE45E00D82731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0AECFA31BAFE45E00D82731 /* FBFilesTableViewController.m in Sources */,
+				B0AECFA41BAFE45E00D82731 /* FBAppDelegate.m in Sources */,
+				B0AECFA51BAFE45E00D82731 /* main.m in Sources */,
+				B0AECFA61BAFE45E00D82731 /* FBCustomPreviewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0B5F8AE1B2D127200C0E0AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -686,11 +747,6 @@
 			target = B08285F01BAFD54D006792A8 /* Prerequisites */;
 			targetProxy = B08285F51BAFD55E006792A8 /* PBXContainerItemProxy */;
 		};
-		B082CC0C1B3A05A10046F747 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */;
-			targetProxy = B082CC0B1B3A05A10046F747 /* PBXContainerItemProxy */;
-		};
 		B09820301BAFC68C003F6636 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */;
@@ -701,20 +757,25 @@
 			target = B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */;
 			targetProxy = B09820311BAFC697003F6636 /* PBXContainerItemProxy */;
 		};
-		B09820351BAFC6CA003F6636 /* PBXTargetDependency */ = {
+		B0AECF9E1BAFE45E00D82731 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B03C5EF51771107F00295DD2 /* FileBrowser */;
-			targetProxy = B09820341BAFC6CA003F6636 /* PBXContainerItemProxy */;
+			target = B01916B31B2C0CAC00311461 /* NanoFileBrowserFramework */;
+			targetProxy = B0AECF9F1BAFE45E00D82731 /* PBXContainerItemProxy */;
+		};
+		B0AECFA01BAFE45E00D82731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */;
+			targetProxy = B0AECFA11BAFE45E00D82731 /* PBXContainerItemProxy */;
+		};
+		B0AECFB81BAFE47000D82731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */;
+			targetProxy = B0AECFB71BAFE47000D82731 /* PBXContainerItemProxy */;
 		};
 		B0B5F8B51B2D127200C0E0AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B0B5F8B11B2D127200C0E0AF /* NanoFileBrowser Extension */;
 			targetProxy = B0B5F8B41B2D127200C0E0AF /* PBXContainerItemProxy */;
-		};
-		B0C0CF241B3436AC0012903B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B0B5F8A51B2D127200C0E0AF /* NanoFileBrowser */;
-			targetProxy = B0C0CF231B3436AC0012903B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -995,6 +1056,40 @@
 			};
 			name = Release;
 		};
+		B0AECFB31BAFE45E00D82731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
+				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
+				INFOPLIST_OUTPUT_FORMAT = XML;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.highcaffeinecontent.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = FileBrowser;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B0AECFB41BAFE45E00D82731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
+				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
+				INFOPLIST_OUTPUT_FORMAT = XML;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.highcaffeinecontent.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = FileBrowser;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		B0B5F8C41B2D127200C0E0AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1139,12 +1234,22 @@
 				B08285F31BAFD54D006792A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B098202E1BAFC681003F6636 /* Build configuration list for PBXAggregateTarget "NanoFileBrowser-Package" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B098202C1BAFC681003F6636 /* Debug */,
 				B098202D1BAFC681003F6636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0AECFB31BAFE45E00D82731 /* Debug */,
+				B0AECFB41BAFE45E00D82731 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
