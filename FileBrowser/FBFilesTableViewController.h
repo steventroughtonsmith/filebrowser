@@ -13,6 +13,6 @@
 
 - (id)initWithPath:(NSString *)path;
 
-@property NSString *path;
-@property NSArray *files;
+@property (strong) NSString *path;
+@property (strong) NSArray *files;
 @end

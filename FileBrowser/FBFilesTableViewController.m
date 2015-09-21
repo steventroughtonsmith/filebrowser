@@ -41,7 +41,7 @@
 				tempFiles = @[@"mobile"];
 			
 			if ([path isEqualToString:@"/usr"])
-				tempFiles = @[@"lib"];
+				tempFiles = @[@"lib", @"libexec", @"bin"];
 		}
 		
 		self.files = [tempFiles sortedArrayWithOptions:0 usingComparator:^NSComparisonResult(NSString* file1, NSString* file2) {
@@ -108,11 +108,12 @@
 	else
 		cell.imageView.image = nil;
 	
+#if 0
 	if (fileExists && !isDirectory)
 		cell.accessoryType = UITableViewCellAccessoryDetailButton;
 	else
 		cell.accessoryType = UITableViewCellAccessoryNone;
-    
+#endif
     return cell;
 }
 
@@ -159,19 +160,24 @@
 		if (isDirectory)
 		{
 			FBFilesTableViewController *vc = [[FBFilesTableViewController alloc] initWithPath:newPath];
-			[self.navigationController pushViewController:vc animated:YES];
+			[self.navigationController showViewController:vc sender:self];
 		}
 		else if ([FBCustomPreviewController canHandleExtension:[newPath pathExtension]])
 		{
 			FBCustomPreviewController *preview = [[FBCustomPreviewController alloc] initWithFile:newPath];
-			[self.navigationController pushViewController:preview animated:YES];
+			
+			UINavigationController *detailNavController = [[UINavigationController alloc] initWithRootViewController:preview];
+
+			[self.navigationController showDetailViewController:detailNavController sender:self];
 		}
 		else
 		{
 			QLPreviewController *preview = [[QLPreviewController alloc] init];
 			preview.dataSource = self;
 			
-			[self.navigationController pushViewController:preview animated:YES];
+			UINavigationController *detailNavController = [[UINavigationController alloc] initWithRootViewController:preview];
+			
+			[self.navigationController showDetailViewController:detailNavController sender:self];
 		}
 	}
 }
