@@ -483,9 +483,9 @@
 			productReference = B0649C641BA0E6B70066BEFD /* TVFileBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */ = {
+		B0AECF9D1BAFE45E00D82731 /* FileBrowser (Watch Enabled) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser-Watch" */;
+			buildConfigurationList = B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser (Watch Enabled)" */;
 			buildPhases = (
 				B0AECFA21BAFE45E00D82731 /* Sources */,
 				B0AECFA71BAFE45E00D82731 /* Frameworks */,
@@ -499,7 +499,7 @@
 				B0AECF9E1BAFE45E00D82731 /* PBXTargetDependency */,
 				B0AECFA01BAFE45E00D82731 /* PBXTargetDependency */,
 			);
-			name = "FileBrowser-Watch";
+			name = "FileBrowser (Watch Enabled)";
 			productName = FileBrowser;
 			productReference = B0AECFB51BAFE45E00D82731 /* FileBrowser.app */;
 			productType = "com.apple.product-type.application";
@@ -594,7 +594,7 @@
 				B0649C631BA0E6B70066BEFD /* TVFileBrowser */,
 				B098202B1BAFC681003F6636 /* NanoFileBrowser-Package */,
 				B08285F01BAFD54D006792A8 /* Prerequisites */,
-				B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */,
+				B0AECF9D1BAFE45E00D82731 /* FileBrowser (Watch Enabled) */,
 			);
 		};
 /* End PBXProject section */
@@ -769,7 +769,7 @@
 		};
 		B0AECFB81BAFE47000D82731 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B0AECF9D1BAFE45E00D82731 /* FileBrowser-Watch */;
+			target = B0AECF9D1BAFE45E00D82731 /* FileBrowser (Watch Enabled) */;
 			targetProxy = B0AECFB71BAFE47000D82731 /* PBXContainerItemProxy */;
 		};
 		B0B5F8B51B2D127200C0E0AF /* PBXTargetDependency */ = {
@@ -1245,7 +1245,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser-Watch" */ = {
+		B0AECFB21BAFE45E00D82731 /* Build configuration list for PBXNativeTarget "FileBrowser (Watch Enabled)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0AECFB31BAFE45E00D82731 /* Debug */,
