@@ -10,4 +10,4 @@ Screenshot
 What is this?
 =============
 
-Really simple File Browser for iOS; allows you browse the filesystem and retrieve files using iMessage or AirDrop.
+Really simple File Browser for iOS, watchOS & tvOS; allows you browse the filesystem and retrieve files using iMessage or AirDrop.
