@@ -1,7 +1,7 @@
 watchOS Support
 =============
 
-The watchOS target requires a number of steps to build. You want to select the 'NanoFileBrowser-Package' target - this builds all the requisite things, and patches the build WatchKit app to load natively. You will need to manually install the FileBrowser app on your iOS device in the Devices window - build & run will not work in this case.
+The watchOS target requires a number of steps to build. You want to select the 'NanoFileBrowser-Package' target - this builds all the requisite things, and patches the built WatchKit app to load natively. You will need to manually install the FileBrowser app on your iOS device in the Devices window - build & run will not work in this case.
 
 Prerequisites
 =============
