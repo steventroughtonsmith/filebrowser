@@ -1,0 +1,30 @@
+watchOS Support
+=============
+
+The watchOS target requires a number of steps to build. You want to select the 'NanoFileBrowser-Package' target - this builds all the requisite things, and patches the build WatchKit app to load natively. You will need to manually install the FileBrowser app on your iOS device in the Devices window - build & run will not work in this case.
+
+Prerequisites
+=============
+
+Modify Availability.h to redefine __WATCHOS_UNAVAILABLE and __WATCHOS_PROHIBITED
+```
+WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include/Availability.h
+```
+
+Then you need to copy all the missing headers from iOS. If you're linking to any frameworks not in the WatchKit SDK (like SceneKit), you will need to also copy the .tbd file for it from iOS and add 'armv7k'.
+
+```
+sudo cp -rn iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/* WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/
+
+sudo mkdir -p WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/
+sudo cp -rn iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/* WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/
+
+sudo mkdir -p WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/
+sudo cp -rn iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/* WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/
+
+sudo mkdir -p WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Metal.framework/Headers/
+sudo cp -rn iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Metal.framework/Headers/* WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Metal.framework/Headers/
+
+sudo mkdir -p WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/QuickLook.framework/Headers/
+sudo cp -rn iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/QuickLook.framework/Headers/* WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/QuickLook.framework/Headers/
+```
