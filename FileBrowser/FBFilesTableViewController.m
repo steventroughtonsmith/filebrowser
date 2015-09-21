@@ -160,19 +160,24 @@
 		if (isDirectory)
 		{
 			FBFilesTableViewController *vc = [[FBFilesTableViewController alloc] initWithPath:newPath];
-			[self.navigationController pushViewController:vc animated:YES];
+			[self.navigationController showViewController:vc sender:self];
 		}
 		else if ([FBCustomPreviewController canHandleExtension:[newPath pathExtension]])
 		{
 			FBCustomPreviewController *preview = [[FBCustomPreviewController alloc] initWithFile:newPath];
-			[self.navigationController pushViewController:preview animated:YES];
+			
+			UINavigationController *detailNavController = [[UINavigationController alloc] initWithRootViewController:preview];
+
+			[self.navigationController showDetailViewController:detailNavController sender:self];
 		}
 		else
 		{
 			QLPreviewController *preview = [[QLPreviewController alloc] init];
 			preview.dataSource = self;
 			
-			[self.navigationController pushViewController:preview animated:YES];
+			UINavigationController *detailNavController = [[UINavigationController alloc] initWithRootViewController:preview];
+			
+			[self.navigationController showDetailViewController:detailNavController sender:self];
 		}
 	}
 }

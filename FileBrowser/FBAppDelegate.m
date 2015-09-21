@@ -7,26 +7,61 @@
 //
 
 #import "FBAppDelegate.h"
+
+#if TARGET!=TVFileBrowser
 #import "FBFilesTableViewController.h"
+#else
+#import "FBTVFilesTableViewController.h"
+#endif
 
 #include <sys/stat.h>
 
-NSString *startingPath = @"/";
+#if TARGET_OS_SIMULATOR
+#if !TARGET_OS_TV
+NSString *startingPath = @"/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk";
+#else
+NSString *startingPath = @"/Applications/Xcode-beta.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator.sdk";
+#endif
 
+#else
+NSString *startingPath = @"/";
+#endif
 @implementation FBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+ 
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone || UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		self.window.backgroundColor = [UIColor whiteColor];
+	
     [self.window makeKeyAndVisible];
 	
 	FBFilesTableViewController *startingVC = [[FBFilesTableViewController alloc] initWithPath:startingPath];
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:startingVC];
+	UINavigationController *detailNavController = [[UINavigationController alloc] init];
+
+
+	UISplitViewController *splitController = [[UISplitViewController alloc] init];
+	splitController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
 	
-	self.window.rootViewController = navController;
+	
+	splitController.viewControllers = @[navController, detailNavController];
+
+	
+	if (UI_USER_INTERFACE_IDIOM() == 3)
+	{
+//		UINavigationController *outerNavController = [[UINavigationController alloc] initWithRootViewController:splitController];
+
+		
+		splitController.preferredPrimaryColumnWidthFraction = 0.4;
+		self.window.rootViewController = splitController;
+
+
+	}
+	else
+		self.window.rootViewController = splitController;
 	
     return YES;
 }

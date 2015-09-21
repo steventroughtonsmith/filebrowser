@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Pepper.h"
 
-@interface FBAppDelegate : UIResponder <UIApplicationDelegate>
+@interface FBAppDelegate : UIViewController <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

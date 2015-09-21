@@ -6,18 +6,22 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "folder_48-1.png",
+      "filename" : "Picture-48.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "folder_64.png",
+      "filename" : "Picture_64.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "Picture_64-1.png",
+      "scale" : "1x"
     }
   ],
   "info" : {
     "version" : 1,
-    "author" : "xcode",
-    "template-rendering-intent" : "template"
+    "author" : "xcode"
   }
 }

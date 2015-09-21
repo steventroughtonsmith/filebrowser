@@ -9,17 +9,12 @@
 #import "NanoFBFilesTableViewController.h"
 #import "FBCustomPreviewController.h"
 
-
-@interface FBFilesTableViewController ()
-
-@end
-
 @implementation FBFilesTableViewController
 
 - (id)initWithPath:(NSString *)path
 {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (self) {
+	self = [super initWithStyle:UITableViewStylePlain];
+	if (self) {
 		self.path = path;
 		
 		self.title = [path lastPathComponent];
@@ -28,8 +23,10 @@
 		NSArray *tempFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
 		
 		if ([path isEqualToString:@"/"])
+		{
 			tempFiles = @[@"Applications", @"Library", @"System", @"usr"];
-
+		}
+		
 		if (error)
 		{
 			NSLog(@"ERROR: %@", error);
@@ -50,7 +47,7 @@
 		self.files = [tempFiles sortedArrayWithOptions:0 usingComparator:^NSComparisonResult(NSString* file1, NSString* file2) {
 			NSString *newPath1 = [self.path stringByAppendingPathComponent:file1];
 			NSString *newPath2 = [self.path stringByAppendingPathComponent:file2];
-
+			
 			BOOL isDirectory1, isDirectory2;
 			[[NSFileManager defaultManager ] fileExistsAtPath:newPath1 isDirectory:&isDirectory1];
 			[[NSFileManager defaultManager ] fileExistsAtPath:newPath2 isDirectory:&isDirectory2];
@@ -60,42 +57,47 @@
 			
 			return  NSOrderedAscending;
 		}];
-    }
-    return self;
+	}
+	return self;
 }
 
-UIAlertController *ac;
+#if 0
+-(BOOL)canProvideActionController
+{
+	return YES;
+}
+
+-(id)actionController
+{
+	PUICActionItem *item = [PUICActionItem actionItemWithImage:[UIImage imageNamed:@"Share"] title:@"Show Log" target:self action:@selector(showLog:)];
+	return [[PUICActionController alloc] initWithActionItems:@[item]];
+}
+#endif
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super viewDidLoad];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+	// Return the number of sections.
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return self.files.count;
+	// Return the number of rows in the section.
+	return self.files.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"FileCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+	static NSString *CellIdentifier = @"FileCell";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
 	if (!cell)
 		cell = [[PUICTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 	
@@ -104,66 +106,24 @@ UIAlertController *ac;
 	BOOL isDirectory;
 	BOOL fileExists = [[NSFileManager defaultManager ] fileExistsAtPath:newPath isDirectory:&isDirectory];
 	
-    cell.textLabel.text = self.files[indexPath.row];
+	cell.textLabel.text = self.files[indexPath.row];
 	
 	if (isDirectory)
-		cell.imageView.image = [UIImage imageNamed:@"Folder"];
+		cell.imageView.image = [UIImage imageNamed:@"Directory"];
 	else if ([[newPath pathExtension] isEqualToString:@"png"])
 		cell.imageView.image = [UIImage imageNamed:@"Picture"];
 	else
 		cell.imageView.image = nil;
-	
 
-#if 0
-	if (fileExists && !isDirectory)
-		cell.accessoryType = UITableViewCellAccessoryDetailButton;
-	else
-		cell.accessoryType = UITableViewCellAccessoryNone;
-#endif
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-	NSString *newPath = [self.path stringByAppendingPathComponent:self.files[indexPath.row]];
-	
-	NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:newPath.lastPathComponent];
-	
-	NSError *error = nil;
-	
-	[[NSFileManager defaultManager] copyItemAtPath:newPath toPath:tmpPath error:&error];
-	
-	if (error)
-		NSLog(@"ERROR: %@", error);
-	
-	UIActivityViewController *shareActivity = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL fileURLWithPath:tmpPath]] applicationActivities:nil];
-	
-	shareActivity.completionHandler = ^(NSString *activityType, BOOL completed){
-		[[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
-		
-	};
-	
-	UIViewController *vc = [[UIViewController alloc] init];
-	//UINavigationController *nc = [[NSClassFromString(@"PUICNavigationController") alloc] initWithRootViewController:vc];
-	//nc.modalPresentationStyle = UIModalPresentationFullScreen;
-	
-	[self.navigationController pushViewController:vc animated:YES];
-	
-	/*
-	[self.navigationController presentViewController:nc animated:YES completion:^{
-		
-	}];
-	 */
+	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *newPath = [self.path stringByAppendingPathComponent:self.files[indexPath.row]];
 	
-	
 	BOOL isDirectory;
 	BOOL fileExists = [[NSFileManager defaultManager ] fileExistsAtPath:newPath isDirectory:&isDirectory];
-	
 	
 	if (fileExists)
 	{
@@ -177,32 +137,9 @@ UIAlertController *ac;
 			FBCustomPreviewController *preview = [[FBCustomPreviewController alloc] initWithFile:newPath];
 			[self.navigationController pushViewController:preview animated:YES];
 		}
-		else
-		{
-			QLPreviewController *preview = [[QLPreviewController alloc] init];
-			preview.dataSource = self;
-			
-			[self.navigationController pushViewController:preview animated:YES];
-		}
 	}
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - QuickLook
-
-- (BOOL)previewController:(QLPreviewController *)controller shouldOpenURL:(NSURL *)url forPreviewItem:(id <QLPreviewItem>)item {
-	
-    return YES;
-}
-
-- (NSInteger) numberOfPreviewItemsInPreviewController: (QLPreviewController *) controller {
-    return 1;
-}
-
-- (id <QLPreviewItem>) previewController: (QLPreviewController *) controller previewItemAtIndex: (NSInteger) index {
-	
-	NSString *newPath = [self.path stringByAppendingPathComponent:self.files[self.tableView.indexPathForSelectedRow.row]];
-	
-    return [NSURL fileURLWithPath:newPath];
-}
 
 @end

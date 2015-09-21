@@ -9,7 +9,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Glance - NanoFileBrowser.xcscheme</key>
+		<key>NanoFileBrowser-Package.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
@@ -24,7 +24,12 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Notification - NanoFileBrowser.xcscheme</key>
+		<key>Prerequisites.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>TVFileBrowser.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
@@ -47,6 +52,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B02045A41B343566006ACE1C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B03C5EF51771107F00295DD2</key>
 		<dict>
 			<key>primary</key>
@@ -57,12 +67,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B03C7F571B3352380024F0B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B05CE2651B334BD200986C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0649C631BA0E6B70066BEFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B08285F01BAFD54D006792A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B098202B1BAFC681003F6636</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B0B5F8721B2D0E7000C0E0AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B0B5F8A51B2D127200C0E0AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0B5F8B11B2D127200C0E0AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0F693081B334DDA00A03FF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

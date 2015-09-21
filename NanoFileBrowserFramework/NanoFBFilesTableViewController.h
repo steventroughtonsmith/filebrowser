@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuickLook/QuickLook.h>
-
 #import "Pepper.h"
 
-@interface FBFilesTableViewController : PUICTableViewController <QLPreviewControllerDataSource>
+@interface FBFilesTableViewController : PUICTableViewController
 
 - (id)initWithPath:(NSString *)path;
 
-@property __strong NSString *path;
-@property __strong NSArray *files;
+@property (strong) NSString *path;
+@property (strong) NSArray *files;
+
 @end

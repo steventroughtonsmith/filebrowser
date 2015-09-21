@@ -11,24 +11,25 @@
 
 #include <sys/stat.h>
 
+#if TARGET_OS_SIMULATOR
+NSString *startingPath = @"/Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk";
+#else
 NSString *startingPath = @"/";
+#endif
 
 @implementation FBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor blackColor];
-    [self.window makeKeyAndVisible];
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	
 	FBFilesTableViewController *startingVC = [[FBFilesTableViewController alloc] initWithPath:startingPath];
-	
 	PUICNavigationController *navController = [[PUICNavigationController alloc] initWithRootViewController:startingVC];
-	
 	self.window.rootViewController = navController;
-	
-    return YES;
+
+	[self.window makeKeyAndVisible];
+
+	return YES;
 }
 
 @end
