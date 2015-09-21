@@ -32,6 +32,9 @@
 
 +(BOOL)canHandleExtension:(NSString *)fileExt
 {
+	if (UI_USER_INTERFACE_IDIOM() != 4) // Don't use QuickLook for images on watchOS
+		return ([fileExt isEqualToString:@"plist"] || [fileExt isEqualToString:@"strings"] || [fileExt isEqualToString:@"xcconfig"] );
+
 	return ([fileExt isEqualToString:@"plist"] || [fileExt isEqualToString:@"strings"] || [fileExt isEqualToString:@"png"] || [fileExt isEqualToString:@"xcconfig"] );
 }
 
