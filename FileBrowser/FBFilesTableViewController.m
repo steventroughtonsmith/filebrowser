@@ -23,7 +23,9 @@
 		self.path = path;
 		
 		self.title = [path lastPathComponent];
-		
+
+        self.clearsSelectionOnViewWillAppear = NO;
+
 		NSError *error = nil;
 		NSArray *tempFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
 		
@@ -64,6 +66,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    NSIndexPath *selectedPath = self.tableView.indexPathForSelectedRow;
+    if (selectedPath) {
+        [self.tableView deselectRowAtIndexPath:selectedPath animated:animated];
+    }
 }
 
 - (void)didReceiveMemoryWarning
